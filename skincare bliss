@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Bliss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      background-color: #f7c8d0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    header nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    #home {
+      background-color: #ffe6e9;
+      padding: 100px 20px;
+    }
+    #home h1 {
+      font-size: 36px;
+      color: #333;
+    }
+    #home .btn {
+      background-color: #ff6f91;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    #about, #products, #contact {
+      background-color: #fff;
+    }
+    .product-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      width: 200px;
+      cursor: pointer;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .product-details {
+      display: none;
+      text-align: left;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .product-details img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .product-details h2, .product-details p {
+      color: #333;
+    }
+    .product-details .btn {
+      display: block;
+      margin-top: 20px;
+      background-color: #ff6f91;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Skincare Bliss</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Glow Naturally</h1>
+    <p>Your journey to radiant skin starts here!</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Skincare Bliss, we believe in natural, cruelty-free products that enhance your beauty while being kind to the planet.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="showDetails('sunscreen')">
+        <img src="https://img.freepik.com/premium-photo/sunscreen-sandy-beach-with-sunglasses-generative-ai_641010-8834.jpg" alt="Sunscreen" width="150" height="150">
+        <h3>Sunscreen</h3>
+        <p>Protect your skin from harmful UV rays.</p>
+      </div>
+      <div class="product-card" onclick="showDetails('facecleanser')">
+        <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/facewash1.jpg" alt="Face Cleanser" width="150" height="150">
+        <h3>Face Cleanser</h3>
+        <p>Cleansing and refreshing for all skin types.</p>
+      </div>
+      <div class="product-card" onclick="showDetails('serum')">
+        <img src="https://img.freepik.com/premium-photo/beautiful-shot-white-glass-bottle-with-pipette-serum_251474-590.jpg" alt="Serum" width="150" height="150">
+        <h3>Serum</h3>
+        <p>Brighten your skin with natural ingredients.</p>
+      </div>
+      <div class="product-card" onclick="showDetails('moisturizer')">
+        <img src="https://static.vecteezy.com/system/resources/previews/044/092/394/non_2x/soothing-green-botanical-moisturizer-for-sensitive-skin-eco-conscious-skincare-free-photo.jpg" alt="Moisturizer" width="150" height="150">
+        <h3>Moisturizer</h3>
+        <p>Keep your skin soft, smooth, and hydrated.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-details" id="product-details">
+    <div id="sunscreen" class="product-info">
+      <h2>Sunscreen</h2>
+      <img src="https://img.freepik.com/premium-photo/sunscreen-sandy-beach-with-sunglasses-generative-ai_641010-8834.jpg" alt="Sunscreen" width="400" height="400">
+      <p>This sunscreen provides broad-spectrum protection against harmful UVA and UVB rays. Enriched with natural ingredients, it nourishes your skin while keeping it safe from sun damage.</p>
+      <p><strong>How to use:</strong> Apply liberally on your face and neck fifteen minutes before sun exposure. Reapply every two hours for optimal protection.</p>
+      <a class="btn" onclick="hideDetails()">Back</a>
+    </div>
+    <div id="facecleanser" class="product-info">
+      <h2>Face Cleanser</h2>
+      <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2022/01/facewash1.jpg" alt="Face Cleanser" width="400" height="400">
+      <p>This face cleanser gently removes dirt and impurities while maintaining your skin's natural moisture balance. Suitable for all skin types.</p>
+      <p><strong>How to use:</strong> Apply to damp skin and massage in circular motions, then rinse thoroughly.</p>
+      <a class="btn" onclick="hideDetails()">Back</a>
+    </div>
+    <div id="serum" class="product-info">
+      <h2>Serum</h2>
+      <img src="https://img.freepik.com/premium-photo/beautiful-shot-white-glass-bottle-with-pipette-serum_251474-590.jpg" alt="Serum" width="400" height="400">
+      <p>This serum brightens your skin and reduces the appearance of dark spots with its natural formula.</p>
+      <p><strong>How to use:</strong> Apply a few drops to clean skin and gently massage in circular motions.</p>
+      <a class="btn" onclick="hideDetails()">Back</a>
+    </div>
+    <div id="moisturizer" class="product-info">
+      <h2>Moisturizer</h2>
+      <img src="https://static.vecteezy.com/system/resources/previews/044/092/394/non_2x/soothing-green-botanical-moisturizer-for-sensitive-skin-eco-conscious-skincare-free-photo.jpg" alt="Moisturizer" width="400" height="400">
+      <p>This moisturizer keeps your skin hydrated and smooth throughout the day. Perfect for dry and sensitive skin.</p>
+      <p><strong>How to use:</strong> Apply generously on your face and neck after cleansing.</p>
+      <a class="btn" onclick="hideDetails()">Back</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Skincare Bliss. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showDetails(productId) {
+      document.getElementById('product-details').style.display = 'block';
+      document.querySelectorAll('.product-info').forEach(info => info.style.display = 'none');
+      document.getElementById(productId).style.display = 'block';
+    }
+    function hideDetails() {
+      document.getElementById('product-details').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
